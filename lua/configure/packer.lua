@@ -61,12 +61,6 @@ return require('packer').startup(function(use)
 	use {
 		'folke/trouble.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
-		config = function()
-			require('trouble').setup {
-				height = 15,
-				auto_close = true,
-			}
-		end
 	}
 
 	use {
