@@ -38,6 +38,21 @@ return {
                 '<cmd>FzfLua buffers<cr>',
                 'Search buffers',
             },
+            {
+                '<leader>sr',
+                '<cmd>FzfLua lsp_references<cr>',
+                'Search LSP references',
+            },
+            {
+                '<leader>sd',
+                '<cmd>FzfLua lsp_document_symbols<cr>',
+                'Search document symbols',
+            },
+            {
+                '<leader>sw',
+                '<cmd>FzfLua lsp_workspace_symbols<cr>',
+                'Search workspace symbols',
+            },
         },
     },
 }
