@@ -6,6 +6,13 @@ local function tmap(lhs, rhs, desc)
     vim.keymap.set('t', lhs, rhs, { desc = desc, silent = true })
 end
 
+local function imap(lhs, rhs, desc)
+    vim.keymap.set('i', lhs, rhs, { desc = desc, silent = true })
+end
+
+-- Keymap to help quit using <C-c> due to it skipping the exit event.
+imap('<C-;>', '<esc>', 'Exit insert mode')
+
 -- Quit Everything
 nmap('<leader>qq', '<cmd>qa<cr>', '[Q]uit [A]ll')
 
@@ -45,7 +52,3 @@ nmap('<leader>vs', '<cmd>vs<cr>', '[V]ertical [S]plit')
 
 -- Resume last fzf command
 nmap('<leader>fr', '<cmd>FzfLua resume<cr>', '[F]zf [R]esume')
-
--- Neotree / File explorer
-nmap('<C-n>', '<cmd>Neotree toggle<cr>', 'Toggle Neotree')
-nmap('<leader>e', '<cmd>Neotree focus<cr>', 'Focus Neotree')

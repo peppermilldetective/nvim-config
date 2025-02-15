@@ -22,14 +22,15 @@ return {
                 preset = 'default',
                 ['<C-l>'] = { 'snippet_forward', 'fallback' },
                 ['<C-h>'] = { 'snippet_backward', 'fallback' },
-                ['<Tab>'] = {},
-                ['<S-Tab>'] = {},
+                ['<Tab>'] = { 'select_next', 'fallback' },
+                ['<S-Tab>'] = { 'select_prev', 'fallback' },
             },
 
             completion = {
                 menu = { border = 'single' },
                 list = {
                     selection = {
+                        preselect = false,
                         auto_insert = true,
                     },
                 },

@@ -1,6 +1,7 @@
 return {
     {
         'folke/tokyonight.nvim',
+        enabled = false,
         lazy = false,
         priority = 1000,
         config = function()
@@ -9,6 +10,7 @@ return {
     },
     {
         '0xstepit/flow.nvim',
+        enabled = false,
         lazy = false,
         priority = 1000,
         tag = 'v2.0.0',
@@ -30,6 +32,18 @@ return {
         config = function(_, opts)
             require('flow').setup(opts)
             vim.cmd([[colorscheme flow]])
+        end,
+    },
+    {
+        'dgox16/oldworld.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+            variant = 'oled',
+        },
+        config = function(_, opts)
+            require('oldworld').setup(opts)
+            vim.cmd([[colorscheme oldworld]])
         end,
     },
 }
