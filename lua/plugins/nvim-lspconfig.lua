@@ -1,3 +1,4 @@
+-- TODO: Update when neovim 0.11 releases
 return {
     { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
