@@ -24,7 +24,13 @@ return {
             notify = { enabled = true },
             notifier = { enabled = true, timeout = 3000 },
             quickfile = { enabled = true },
-            scroll = { enabled = true },
+            scroll = {
+                enabled = true,
+                animate = {
+                    duration = { step = 10, total = 150 },
+                    easing = 'linear',
+                },
+            },
             statuscolumn = { enabled = true },
             words = { enabled = true },
         },
@@ -35,6 +41,7 @@ return {
         'folke/snacks.nvim',
         priority = 1000,
         lazy = false,
+        ---@type snacks.Config
         opts = {
             -- your configuration comes here
             -- or leave it empty to use the default settings
@@ -81,6 +88,7 @@ return {
                 desc = 'Toggle Explorer',
             },
         },
+        ---@type snacks.Config
         opts = {
             explorer = {
                 enabled = true,
@@ -103,6 +111,7 @@ return {
                 desc = 'Toggle Scratch Buffer',
             },
         },
+        ---@type snacks.Config
         opts = {
             scratch = { enabled = true },
         },
@@ -123,6 +132,7 @@ return {
                 desc = 'Toggle Terminal',
             },
         },
+        ---@type snacks.Config
         opts = {
             terminal = {
                 enabled = true,
@@ -151,6 +161,7 @@ return {
                 desc = 'Open LazyGit',
             },
         },
+        ---@type snacks.Config
         opts = {
             lazygit = { enabled = false },
         },
@@ -159,6 +170,7 @@ return {
     -- Picker
     {
         'folke/snacks.nvim',
+        ---@type snacks.Config
         opts = {
             picker = { enabled = true },
         },
