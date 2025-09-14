@@ -1,49 +1,13 @@
 return {
     {
-        'folke/tokyonight.nvim',
-        enabled = false,
-        lazy = false,
-        priority = 1000,
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
-            -- vim.cmd([[colorscheme tokyonight-night]])
-        end,
-    },
-    {
-        '0xstepit/flow.nvim',
-        enabled = false,
-        lazy = false,
-        priority = 1000,
-        tag = 'v2.0.0',
-        opts = {
-            theme = {
-                style = 'dark',
-                contrast = 'high',
-                transparent = false,
-            },
-            colors = {
-                mode = 'default',
-                fluo = 'pink',
-            },
-            ui = {
-                borders = 'inverse',
-                aggressive_spell = false,
-            },
-        },
-        config = function(_, opts)
-            require('flow').setup(opts)
-            vim.cmd([[colorscheme flow]])
-        end,
-    },
-    {
-        'dgox16/oldworld.nvim',
-        lazy = false,
-        priority = 1000,
-        opts = {
-            variant = 'oled',
-        },
-        config = function(_, opts)
-            require('oldworld').setup(opts)
-            vim.cmd([[colorscheme oldworld]])
+            require('github-theme').setup({})
+
+            vim.cmd('colorscheme github_dark_high_contrast')
         end,
     },
 }
