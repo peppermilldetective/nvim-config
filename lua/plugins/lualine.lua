@@ -5,7 +5,7 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = 'oldworld',
+                    theme = 'github_dark_high_contrast',
                 },
             })
         end,
