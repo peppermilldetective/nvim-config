@@ -35,6 +35,12 @@ return {
                             action = 'q',
                         },
                     },
+                    mru = {
+                        enable = true,
+                        limit = 8,
+                        label = 'Recent Files',
+                        cwd_only = true,
+                    },
                 },
             })
         end,
