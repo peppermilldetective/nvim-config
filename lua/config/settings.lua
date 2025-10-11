@@ -36,6 +36,9 @@ opt.virtualedit = 'block'
 opt.wildmode = 'longest:full,full'
 opt.wrap = false
 
+-- Adjust border for floating windows
+opt.winborder = 'rounded'
+
 -- Make line numbers default
 opt.number = true
 opt.relativenumber = true
